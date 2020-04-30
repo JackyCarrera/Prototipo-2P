@@ -1,6 +1,5 @@
-DROP DATABASE siu;
-CREATE DATABASE siu;
-USE siu;
+CREATE DATABASE siu1;
+USE siu1;
 -- -----------------------------------------------------
 -- Table `educativo`.`Alumnos`
 -- -----------------------------------------------------

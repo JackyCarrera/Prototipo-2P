@@ -9,6 +9,8 @@
  * @author Jacky
  */
 public class MDI extends javax.swing.JFrame {
+    private Alumnos NuevaVentana;
+    private Maestros NuevaVentana1;
 
     /**
      * Creates new form MDI
@@ -33,6 +35,8 @@ public class MDI extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -65,14 +69,31 @@ public class MDI extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Catalogo");
+
+        jMenuItem5.setText("Facultades");
+        jMenu2.add(jMenuItem5);
+
+        jMenuItem6.setText("sedes");
+        jMenu2.add(jMenuItem6);
+
         jMenuBar1.add(jMenu2);
 
         jMenu6.setText("Procesos");
 
         jMenuItem2.setText("Alumnos");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem2);
 
         jMenuItem3.setText("Maestros");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem3);
 
         jMenuBar1.add(jMenu6);
@@ -98,6 +119,18 @@ public class MDI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+         NuevaVentana = new Alumnos();
+        jDesktopPane1.add(NuevaVentana);//Codigo para hacer visible JinternalFrame
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        NuevaVentana1 = new Maestros();
+        jDesktopPane1.add(NuevaVentana1);//Codigo para hacer visible JinternalFrame
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,6 +179,8 @@ public class MDI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem8;
     // End of variables declaration//GEN-END:variables
 }
